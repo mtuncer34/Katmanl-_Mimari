@@ -1,3 +1,8 @@
 Katmanlı mimaride katmanlar aynı bilgisayardaysa n-Layer ayrı bilgisayardaysa n-Tier
 
+Katmanlı mimaride genelde 3 katman vardır :
+1.DAL(Data Access Layer)
+2.BLL(Business Logic Layer)
+3.PL(Presentation Layer)
+
 
