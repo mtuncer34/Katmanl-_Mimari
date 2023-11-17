@@ -2,14 +2,24 @@ Katmanlı mimari projeyi mantıksal ve fiziksel olarak parçalara ayırmaktır.
 Katmanlı mimaride katmanlar aynı bilgisayardaysa n-Layer ayrı bilgisayardaysa n-Tier
 Düz mimari de diğer katmanlar sadece kendisinden sonraya referans verebiliyor bu şekildede katmanlar birbirine ulaşamıyor. Soğan mimarisinin farkı bilgiler eklenerek eklenerek gider,miras gibi
 tüm katmanların bilgisine ulaşabiliriz. Katman ikide olabilir 3 te 4 te ama genelde 3 katman yazılır. İşe göre katman belirlenir.
-    En iç katman = Core(Domain) = Entityler
+    En iç katman = Core(Domain) = Entityler(Model)
     İkinci katman = DAL(ınfrastructure) = Veriye erişim
     Üçüncü katman = Application = veriye nasıl kodlayacağımız 
-    Dördüncü katman = UI(UserInterface) =
+    Dördüncü katman = UI(User Interface) =
  
 Katmanlı mimaride genelde 3 katman vardır :
 1.DAL(Data Access Layer)
 2.BLL(Business Logic Layer)
 3.PL(Presentation Layer)
+
+PROJEYE BAŞLARKEN 👌👌👌
+blank Solition'la başlanır. Ve new proje denerek Clas Library eklenir adına .Domain verilir.
+Domain katmanına Entities klasör oluşturulur,Altınada :
+Abstract = IBaseEntities = CreateDate,UpdateDate,PassiveDate....
+Concrete(Model) = İhtiyacımız olan sınıflar,Ürünler,Kategoriler....
+Enum Klasörüde Domanin altına açılır ve : Status active,Modified,Passive eklenir.
+NOT: DTO(Data Trasfer Object) = Genelde İnsert ve Update için kullanılır.
+NOT : ViweModel = Genelde Select için kullanılır.
+6. AppUser ile AppRole = Identity Sınıflarından miras alınır ve ek bilgiler isteniyorsa bu sınıflara eklenir.
 
 
