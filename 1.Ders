@@ -1,5 +1,12 @@
+Katmanlı mimari projeyi mantıksal ve fiziksel olarak parçalara ayırmaktır.
 Katmanlı mimaride katmanlar aynı bilgisayardaysa n-Layer ayrı bilgisayardaysa n-Tier
-
+Düz mimari de diğer katmanlar sadece kendisinden sonraya referans verebiliyor bu şekildede katmanlar birbirine ulaşamıyor. Soğan mimarisinin farkı bilgiler eklenerek eklenerek gider,miras gibi
+tüm katmanların bilgisine ulaşabiliriz. Katman ikide olabilir 3 te 4 te ama genelde 3 katman yazılır. İşe göre katman belirlenir.
+    En iç katman = Core(Domain) = Entityler
+    İkinci katman = DAL(ınfrastructure) = Veriye erişim
+    Üçüncü katman = Application = veriye nasıl kodlayacağımız 
+    Dördüncü katman = UI(UserInterface) =
+ 
 Katmanlı mimaride genelde 3 katman vardır :
 1.DAL(Data Access Layer)
 2.BLL(Business Logic Layer)
