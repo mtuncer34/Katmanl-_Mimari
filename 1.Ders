@@ -31,7 +31,6 @@ NOT : Projede çalışırken Solution üzerinden property lerden current ayarlan
 12. Context sınıfını IdentityDBContext'ten referan verilir<AppUser,AppRole,int> yazılır.
 13. Context sınıfında DbSet'ler tanımlanır...
 14. Context sınıfına On model Creating ve Configuration eklenir.
-
-21/10/2023 son derste kaldık
+15. 
 
 
