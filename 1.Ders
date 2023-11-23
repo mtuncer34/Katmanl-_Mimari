@@ -15,7 +15,7 @@ Katmanlı mimaride genelde 3 katman vardır :
 PROJEYE BAŞLARKEN 👌👌👌
 
 1. blank Solition'la başlanır. Ve new proje denerek Clas Library eklenir adına .Domain verilir.
-2. Domain katmanına Entities klasör oluşturulur,Altınada :
+2. Domain katmanına Entities klasör oluşturulur,Altınada,Enum, heryerde herşey bu kata yazılır:
 3. Abstract = IBaseEntities = CreateDate,UpdateDate,PassiveDate....
 4. Concrete(Model) = İhtiyacımız olan sınıflar,Ürünler,Kategoriler....
 5. Enum Klasörüde Domanin altına açılır ve : Status active,Modified,Passive eklenir.
@@ -45,6 +45,13 @@ ve repository aslında fiş ve priz gibidir domain katmanında oluşturduğumu r
 
 NOT : Asekron birbirene bağlı olmadan başka bir işin başlaması demektir. Asekron programa dosya yazma ve okumada 4 kat daha hızlıdır. Normalde bilgisayarlarda en yavaş iş dosya yazma ve okumadır.
 
+16. Application katmanı oluşturulur. Bu katman veriyi al göndr işi yapar.işin nasıl yapıldığıyla ilgili katmandır. bl(businiz layer)
+ve burada services dosyası ve Interfacesi oluşturulur. 
+17. Models ve Services katmanı oluşturulur. Model altınada DTO ve VM klasörü oluşturulur. Bu DTO lar application ile user arasında veri taşır. ve DTO larda istediğimiz kadar veriyi taşımak için kullanılır.
+
+NOT : VM ile DTO arasındaki fark viem eğer select cümleleri varsa joinlemek gerekiyorsa kullanılır. Yani gereksiz yere id göndermemek için, insertte nasılsa id göndermiyoruz. Yani id gönderilen DTO ve id gönderilmeyen DTO gibi ayırabiliriz.
+
+28 ekimde kaldık
 
 
 
