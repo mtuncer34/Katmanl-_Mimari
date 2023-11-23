@@ -23,7 +23,7 @@ NOT : ViweModel = Genelde Select için kullanılır.
 
 6. AppUser ile AppRole = Identity Sınıflarından miras alınır ve ek bilgiler isteniyorsa bu sınıflara eklenir.
 7. Navigation properties verilir.
-8. Infrastructure katmanı eklenir(Clas Library)
+8. Infrastructure katmanı eklenir.yani birtane Clas Library eklenir. Bu katman database katmanıdır(SQL,MYSQL,ACCESS veya ORACLE olabilir.)
 9. Infrastructure katmanına EntityConfiguraions ve Repositorys dosyası eklenir. Katmanla gelen class ismi DBContext olarak değiştirilir.
 NOT : Projede çalışırken Solution üzerinden property lerden current ayarlanır.
 10. Microsoft.EntityFrameworkCore, Microsoft.EntityFrameworkCore.SqlServer ve Microsoft.EntityFrameworkCore.SqlServer Tools Infrastructure katmanına yüklenir.
@@ -32,5 +32,6 @@ NOT : Projede çalışırken Solution üzerinden property lerden current ayarlan
 13. Context sınıfında DbSet'ler tanımlanır...
 14. Context sınıfına On model Creating ve Configuration eklenir. ve CFg dosyaları burada çok uzun olmaması için bu katmanda ayrı bir
 klasör açılır ve CFG ler oraya yazılır. ve buradaki context katmanından referans verilir. 
+NOT : Interface'ler bağımlılıktan kurtulmak ve esnek olmak için kullanılır.
 
 
