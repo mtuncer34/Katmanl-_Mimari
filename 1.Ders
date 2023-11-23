@@ -13,11 +13,13 @@ Katmanlı mimaride genelde 3 katman vardır :
 3.PL(Presentation Layer)
 
 PROJEYE BAŞLARKEN 👌👌👌
+
 1. blank Solition'la başlanır. Ve new proje denerek Clas Library eklenir adına .Domain verilir.
 2. Domain katmanına Entities klasör oluşturulur,Altınada :
 3. Abstract = IBaseEntities = CreateDate,UpdateDate,PassiveDate....
 4. Concrete(Model) = İhtiyacımız olan sınıflar,Ürünler,Kategoriler....
 5. Enum Klasörüde Domanin altına açılır ve : Status active,Modified,Passive eklenir.
+
 NOT: DTO(Data Trasfer Object) = Genelde İnsert ve Update için kullanılır.
 NOT : ViweModel = Genelde Select için kullanılır.
 
@@ -25,13 +27,24 @@ NOT : ViweModel = Genelde Select için kullanılır.
 7. Navigation properties verilir.
 8. Infrastructure katmanı eklenir.yani birtane Clas Library eklenir. Bu katman database katmanıdır(SQL,MYSQL,ACCESS veya ORACLE olabilir.)
 9. Infrastructure katmanına EntityConfiguraions ve Repositorys dosyası eklenir. Katmanla gelen class ismi DBContext olarak değiştirilir.
+
 NOT : Projede çalışırken Solution üzerinden property lerden current ayarlanır.
+
 10. Microsoft.EntityFrameworkCore, Microsoft.EntityFrameworkCore.SqlServer ve Microsoft.EntityFrameworkCore.SqlServer Tools Infrastructure katmanına yüklenir.
 11. Infrastructure katmanında Domain katmanı referans olarak eklenir.
 12. Infrastructure katmanındaki Context sınıfını IdentityDBContext'ten referan verilir<AppUser,AppRole,int> yazılır.
 13. Context sınıfında DbSet'ler tanımlanır...
 14. Context sınıfına On model Creating ve Configuration eklenir. ve CFg dosyaları burada çok uzun olmaması için bu katmanda ayrı bir
 klasör açılır ve CFG ler oraya yazılır. ve buradaki context katmanından referans verilir. 
+
 NOT : Interface'ler bağımlılıktan kurtulmak ve esnek olmak için kullanılır.
+
+15. Programımızda farklı databaseler kullanılması için repositoryler oluşturulur, önce domain katmanında interface olarak her modelimiz için oluşturulur. ve boş olarak
+olaki yarın farklı model de farklı bir sorgulama metoduna ihtiyaç duyulur diye. Örnek shoppinkartlla alakalı IBaseRepositori deki 5 asıl metodun(CRUD) dışında metoda ihtiyaç olursa diye
+ve repository aslında fiş ve priz gibidir domain katmanında oluşturduğumu repositorylerin interfacinin fişi olan repositoryleride Infrastructure katmanındaki class olarak oluşturulur.
+
+NOT : Asekron birbirene bağlı olmadan başka bir işin başlaması demektir. Asekron programa dosya yazma ve okumada 4 kat daha hızlıdır. Normalde bilgisayarlarda en yavaş iş dosya yazma ve okumadır.
+
+
 
 
