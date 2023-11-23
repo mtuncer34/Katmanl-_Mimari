@@ -13,11 +13,11 @@ Katmanlı mimaride genelde 3 katman vardır :
 3.PL(Presentation Layer)
 
 PROJEYE BAŞLARKEN 👌👌👌
-blank Solition'la başlanır. Ve new proje denerek Clas Library eklenir adına .Domain verilir.
-Domain katmanına Entities klasör oluşturulur,Altınada :
-Abstract = IBaseEntities = CreateDate,UpdateDate,PassiveDate....
-Concrete(Model) = İhtiyacımız olan sınıflar,Ürünler,Kategoriler....
-Enum Klasörüde Domanin altına açılır ve : Status active,Modified,Passive eklenir.
+1. blank Solition'la başlanır. Ve new proje denerek Clas Library eklenir adına .Domain verilir.
+2. Domain katmanına Entities klasör oluşturulur,Altınada :
+3. Abstract = IBaseEntities = CreateDate,UpdateDate,PassiveDate....
+4. Concrete(Model) = İhtiyacımız olan sınıflar,Ürünler,Kategoriler....
+5. Enum Klasörüde Domanin altına açılır ve : Status active,Modified,Passive eklenir.
 NOT: DTO(Data Trasfer Object) = Genelde İnsert ve Update için kullanılır.
 NOT : ViweModel = Genelde Select için kullanılır.
 
@@ -28,9 +28,9 @@ NOT : ViweModel = Genelde Select için kullanılır.
 NOT : Projede çalışırken Solution üzerinden property lerden current ayarlanır.
 10. Microsoft.EntityFrameworkCore, Microsoft.EntityFrameworkCore.SqlServer ve Microsoft.EntityFrameworkCore.SqlServer Tools Infrastructure katmanına yüklenir.
 11. Infrastructure katmanında Domain katmanı referans olarak eklenir.
-12. Context sınıfını IdentityDBContext'ten referan verilir<AppUser,AppRole,int> yazılır.
+12. Infrastructure katmanındaki Context sınıfını IdentityDBContext'ten referan verilir<AppUser,AppRole,int> yazılır.
 13. Context sınıfında DbSet'ler tanımlanır...
-14. Context sınıfına On model Creating ve Configuration eklenir.
-15. 
+14. Context sınıfına On model Creating ve Configuration eklenir. ve CFg dosyaları burada çok uzun olmaması için bu katmanda ayrı bir
+klasör açılır ve CFG ler oraya yazılır. ve buradaki context katmanından referans verilir. 
 
 
