@@ -34,24 +34,25 @@ NOT : Projede çalışırken Solution üzerinden property lerden current ayarlan
 11. Infrastructure katmanında Domain katmanı referans olarak eklenir.
 12. Infrastructure katmanındaki Context sınıfını IdentityDBContext'ten referan verilir<AppUser,AppRole,int> yazılır.
 13. Context sınıfında DbSet'ler tanımlanır...
-14. Context sınıfına On model Creating ve Configuration eklenir. ve CFg dosyaları burada çok uzun olmaması için bu katmanda ayrı bir
-klasör açılır ve CFG ler oraya yazılır. ve buradaki context katmanından referans verilir. 
+14. Configuring eklenir. ve hangi databasle çalışılacaksa onun yalu yazılır.
+15. On model Creating eklenir ve altına CFg dosyaları burada çok uzun olmaması için bu katmanda ayrı bir klasör açılır ve CFG ler oraya yazılır. ve buradanda o katmana referans verilir. 
 
 NOT : Interface'ler bağımlılıktan kurtulmak ve esnek olmak için kullanılır.
 
-15. Programımızda farklı databaseler kullanılması için repositoryler oluşturulur, önce domain katmanında interface olarak her modelimiz için oluşturulur. ve boş olarak
+16. Programımızda farklı databaseler kullanılması için repositoryler oluşturulur, önce domain katmanında interface olarak her modelimiz için oluşturulur. ve boş olarak
 olaki yarın farklı model de farklı bir sorgulama metoduna ihtiyaç duyulur diye. Örnek shoppinkartlla alakalı IBaseRepositori deki 5 asıl metodun(CRUD) dışında metoda ihtiyaç olursa diye
 ve repository aslında fiş ve priz gibidir domain katmanında oluşturduğumu repositorylerin interfacinin fişi olan repositoryleride Infrastructure katmanındaki class olarak oluşturulur.
+17. add-migration 1.surum ve update-database yapılır.
 
 NOT : Asekron birbirene bağlı olmadan başka bir işin başlaması demektir. Asekron programa dosya yazma ve okumada 4 kat daha hızlıdır. Normalde bilgisayarlarda en yavaş iş dosya yazma ve okumadır.
 
-16. Application katmanı oluşturulur. Bu katman veriyi al göndr işi yapar.işin nasıl yapıldığıyla ilgili katmandır. bl(businiz layer)
+18. Application katmanı oluşturulur. ve İnfrastructre katmanı referans alınır. Bu katman veriyi al göndr işi yapar.işin nasıl yapıldığıyla ilgili katmandır. bl(businiz layer)
 ve burada services dosyası ve Interfacesi oluşturulur. 
-17. Models ve Services katmanı oluşturulur. Model altınada DTO ve VM klasörü oluşturulur. Bu DTO lar application ile user arasında veri taşır. ve DTO larda istediğimiz kadar veriyi taşımak için kullanılır.
+19. Models ve Services katmanı oluşturulur. Model altınada DTO ve VM klasörü oluşturulur. Bu DTO lar application ile user arasında veri taşır. ve DTO larda istediğimiz kadar veriyi taşımak için kullanılır.
 
 NOT : VM ile DTO arasındaki fark viem eğer select cümleleri varsa joinlemek gerekiyorsa kullanılır. Yani gereksiz yere id göndermemek için, insertte nasılsa id göndermiyoruz. Yani id gönderilen DTO ve id gönderilmeyen DTO gibi ayırabiliriz.
 
-28 ekimde kaldık
+
 
 
 
