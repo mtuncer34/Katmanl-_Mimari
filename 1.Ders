@@ -54,10 +54,10 @@ ve burada services dosyası ve Interfacesi oluşturulur.
 NOT : VM ile DTO arasındaki fark viem eğer select cümleleri varsa joinlemek gerekiyorsa kullanılır. Yani gereksiz yere id göndermemek için, insertte nasılsa id göndermiyoruz. Yani id gönderilen DTO ve id gönderilmeyen DTO gibi ayırabiliriz.
 21. UI Katmanı oluşturulur. ve Aplication katmanı referans olarak eklenir.
 22. Program cs. se eklenir:
-builder.Services.AddDbContext<HardwareDenemeContext>(x=>x.UseSqlServer(builder.Configuration.GetConnectionString("ConnStr")));
+builder.Services.AddDbContext<HardwareDenemeContext>(x=>x.UseSqlServer());
 builder.Services.AddIdentity<AppUser, AppRole>(x => { x.Password.RequiredLength = 7; }).AddEntityFrameworkStores<HardwareDenemeContext>(); => bununla şifrenin buyuk küçük harf ve numarek değerler verilebilir.
 builder.Services.AddTransient<IAppUserService,AppUserService>(); eklenir ve AppRole,AddProduct yani gerektikçe modeller eklenir 
 23. UI katmanında sağ tıklanır ve scafolded yapılır AdminPanel denilir gelen penceredeki app.UseEndpoints ve altı kesilerek program .cd teki MapController üstüne yapıştırılır.
-
+24. 
 
 
