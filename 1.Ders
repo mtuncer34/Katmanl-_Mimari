@@ -46,9 +46,10 @@ ve repository aslında fiş ve priz gibidir domain katmanında oluşturduğumu r
 
 NOT : Asekron birbirene bağlı olmadan başka bir işin başlaması demektir. Asekron programa dosya yazma ve okumada 4 kat daha hızlıdır. Normalde bilgisayarlarda en yavaş iş dosya yazma ve okumadır.
 
-18. Application katmanı oluşturulur. ve İnfrastructre katmanı referans alınır. Bu katman veriyi al göndr işi yapar.işin nasıl yapıldığıyla ilgili katmandır. bl(businiz layer)
+18. Application katmanı oluşturulur. ve İnfrastructre katmanı referans alınır. Nugettan => AutoMaper.Extensions.Microsoft.DependedencyInjection ve Microsoft.AspNetCore.Identity paketleri yüklenir.
+19. Bu katman veriyi al göndr işi yapar.işin nasıl yapıldığıyla ilgili katmandır. BLL(Business Logic Layer)
 ve burada services dosyası ve Interfacesi oluşturulur. 
-19. Models ve Services katmanı oluşturulur. Model altınada DTO ve VM klasörü oluşturulur. Bu DTO lar application ile user arasında veri taşır. ve DTO larda istediğimiz kadar veriyi taşımak için kullanılır.
+20. Models ve Services katmanı oluşturulur. Model altınada DTO ve VM klasörü oluşturulur. Bu DTO lar application ile user arasında veri taşır. ve DTO larda istediğimiz kadar veriyi taşımak için kullanılır.
 
 NOT : VM ile DTO arasındaki fark viem eğer select cümleleri varsa joinlemek gerekiyorsa kullanılır. Yani gereksiz yere id göndermemek için, insertte nasılsa id göndermiyoruz. Yani id gönderilen DTO ve id gönderilmeyen DTO gibi ayırabiliriz.
 
